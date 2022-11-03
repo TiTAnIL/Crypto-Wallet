@@ -1,14 +1,18 @@
 
 <template>
     <nav class="wrapper">
-        <RouterLink to="/" class="logo"><img src="../assets/logo.svg" /></RouterLink>
+        <div class="userControls">
+            <div>Sign In</div>
+            <div>Log Out</div>
+            <div>My Profile</div>
+        </div>
         <div class="navigators">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/Users">Users</RouterLink>
             <RouterLink to="/about">About</RouterLink>
-            <div>Sign In</div>
         </div>
     </nav>
+    <h3 class="coffee-rigths">CoffeeRights ©</h3>
 </template>
 
 <script>
@@ -19,11 +23,14 @@ export default {
 <style scoped>
 .wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+
 }
 .navigators {
-    cursor: pointer;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+}
+.coffee-rigths{
+    text-align: center;
 }
 </style>
